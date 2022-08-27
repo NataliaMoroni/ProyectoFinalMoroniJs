@@ -1,4 +1,4 @@
-//Mi proyecto será sobre una pagina de nutrición con venta de productos nutricionales o viandas
+//Mi proyecto será sobre una pagina de nutrición con informarción y venta de productos nutricionales o viandas
 
 function saludar (){
     let nombre = prompt("Ingrese su Nombre");
