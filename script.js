@@ -4,7 +4,7 @@ function saludar (){
     let nombre = prompt("Ingrese su Nombre");
     
      while (nombre === ""){
-        alert ("Por favor ingrese los datos soliitados");
+        alert ("Por favor ingrese los datos solicitados");
         nombre = prompt ("Ingrese su Nombre"); 
     }
     
@@ -16,23 +16,23 @@ function saludar (){
  
  function imc (){
  
- alert( "Por favor siga las intrucciones para poder obtener correctamente su IMC (indice de masa corporal)");
+ alert( "Por favor siga las intrucciones para poder obtener correctamente su IMC (índice de masa corporal)");
  
  let estatura = prompt ("Ingrese su Estatura en metros. Debe utilizar punto en lugar de coma");
  let peso = prompt ("Ingrese su Peso en kg");
  let resultado = peso /(estatura * estatura);
  
- alert ("Su indice de masa corporal es :" + resultado);
+ alert ("Su índice de masa corporal es :" + resultado);
  
  
  if (resultado <= 18.5) {
      alert ("Usted posee Bajo peso");
  }
  else if (resultado <= 24.9) {
-     alert ("Su peso peso es normal o adecuado");
+     alert ("Su peso es normal o adecuado");
  } 
  else if(resultado <= 29.9) {
-     alert ("Usted se encuentre en sobrepeso");
+     alert ("Usted se encuentra en sobrepeso");
  } 
  else if (resultado <= 34.9) {
      alert ("Usted posee obesidad de grado 1");
