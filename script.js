@@ -50,3 +50,42 @@ function saludar (){
  
  imc ();
  
+
+class Producto {
+    constructor(nombre, precio, detalle){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.detalle = detalle;
+        this.vendido = false;
+    }
+    
+    vender (){
+        this.vendido = true;
+    }
+ }
+
+ let producto1= new Producto ("Vianda1",1000,"Vianda tipo tarta saludable a base de vegetales")
+
+ let producto2= new Producto("Vianda2",1000, "Vianda saludable a base de vegetales y carnes rojas")
+
+ producto1. vender();
+ console.log("vianda1",producto1);
+
+ 
+ const array = [];
+
+
+for(let i = 0; i < 4; i++){
+ let nombreProducto = prompt("ingrese el nombre del producto");
+ let precioProducto = prompt("ingrese el precio del producto");
+ let detalleProducto = prompt("ingrese el detalle del producto");
+ 
+ let obj = new Producto (nombre,precio,detalle);
+
+
+ array.push(obj);
+}
+
+console.log(array);
+
+
