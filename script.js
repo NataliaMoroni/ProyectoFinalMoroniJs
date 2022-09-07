@@ -65,30 +65,33 @@ class Producto {
     }
  }
 
- let producto1= new Producto ("Vianda1",1000,"Vianda tipo tarta saludable a base de vegetales")
+ let producto1= new Producto ("Vianda1",1000,"Vianda tipo tarta saludable a base de vegetales");
 
- let producto2= new Producto("Vianda2",1000, "Vianda saludable a base de vegetales y carnes rojas")
+ let producto2= new Producto("Vianda2",1000, "Vianda saludable a base de vegetales y carnes rojas");
 
  producto1. vender();
  console.log("vianda1",producto1);
 
  
 
-const arregloProduto = [];
+const arregloProducto = [];
 
 for(let i = 0; i < 4; i++){
  let nombre = prompt("ingrese el nombre del producto");
  let precio = prompt("ingrese el precio del producto");
  let detalle = prompt("ingrese el detalle del producto");
- 
- let producto = new Producto (nombre,precio,detalle);
+ let objeto = new Producto (nombre,precio,detalle);
 
- array.push(producto);
+ arregloProducto.push(objeto);
 
 }
 
-alert (arregloProduto);
+console.log(arregloProducto);
 
+
+let nombreProducyo= parseInt(prompt("Ingrese la vianda que desea encontrar"));
+let producto = arregloProductos.find(item => item.nombre === nombre);
+console.log(producto); 
 
 
     
