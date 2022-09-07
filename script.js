@@ -1,7 +1,7 @@
 //Mi proyecto será sobre una pagina de nutrición con informarción y venta de productos nutricionales o viandas
 
 function saludar (){
-    let nombre = prompt("Ingrese su Nombre");
+let nombre = prompt("Ingrese su Nombre");
     
      while (nombre === ""){
         alert ("Por favor ingrese los datos solicitados");
@@ -49,7 +49,8 @@ function saludar (){
  }
  
  imc ();
- 
+
+//Confeccion de objetos Productos
 
 class Producto {
     constructor(nombre, precio, detalle){
@@ -72,20 +73,22 @@ class Producto {
  console.log("vianda1",producto1);
 
  
- const array = [];
 
+const arregloProduto = [];
 
 for(let i = 0; i < 4; i++){
- let nombreProducto = prompt("ingrese el nombre del producto");
- let precioProducto = prompt("ingrese el precio del producto");
- let detalleProducto = prompt("ingrese el detalle del producto");
+ let nombre = prompt("ingrese el nombre del producto");
+ let precio = prompt("ingrese el precio del producto");
+ let detalle = prompt("ingrese el detalle del producto");
  
- let obj = new Producto (nombre,precio,detalle);
+ let producto = new Producto (nombre,precio,detalle);
 
+ array.push(producto);
 
- array.push(obj);
 }
 
-console.log(array);
+alert (arregloProduto);
 
 
+
+    
