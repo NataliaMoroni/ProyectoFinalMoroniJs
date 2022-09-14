@@ -1,5 +1,5 @@
 //Mi proyecto será sobre una pagina de nutrición con informarción y venta de productos nutricionales o viandas
-
+/*
 function saludar (){
 let nombre = prompt("Ingrese su Nombre");
     
@@ -13,7 +13,8 @@ let nombre = prompt("Ingrese su Nombre");
  }
  
  saludar ();
- 
+ */
+/*
  function imc (){
  
  alert( "Por favor siga las intrucciones para poder obtener correctamente su IMC (índice de masa corporal)");
@@ -46,10 +47,53 @@ let nombre = prompt("Ingrese su Nombre");
  
  alert ("Gracias por su consulta");
  
- }
+ } 
  
- imc ();
+ imc ();*/
 
+
+/*
+    let text = "";
+
+    if (imc <= 18.5) {
+        text ("Usted posee Bajo peso");
+    }
+    else if (imc <= 24.9) {
+        text ("Su peso es normal o adecuado");
+    } 
+    else if(imc <= 29.9) {
+        text ("Usted se encuentra en sobrepeso");
+    } 
+    else if (imc <= 34.9) {
+       text ("Usted posee obesidad de grado 1");
+    }
+    else if (imc <= 39.9) {
+       text ("Usted posee obesidad de grado 2");
+    }
+    else if (imc >= 40.0) {
+       text ("Usted posee obesidad grado 3 o morbida");
+    }
+    
+    document.getElementById ("text_resultado").innerText=text
+         
+
+
+let calcular = document.getElementById("calcular");
+calcular.addEventListener("click", calculador);
+
+calculador()
+
+
+/*
+ let formulario = document.getElementById ("formulario");
+ formulario.addEvebtListener("submit", (e) => {
+    e.preventDefault ();
+    let inputs = e.target.children ;
+    console.log(inputs[0].value);
+    console.log(inputs [1]. value);
+ })
+
+/*
 //Confeccion de objetos Productos
 
 class Producto {
@@ -90,8 +134,47 @@ console.log(arregloProducto);
 
 
 let nombreProducyo= parseInt(prompt("Ingrese la vianda que desea encontrar"));
-let producto = arregloProductos.find(item => item.nombre === nombre);
+let producto = arregloProducto.find(item => item.nombre === nombre);
 console.log(producto); 
 
-
+*/
     
+function calculador(){
+    let resultado = document.getElementById ("resultado");
+    let lectura= document.getElementById("lectura");
+
+    let altura = document.getElementById("altura").value / 100;
+    let peso = document.getElementById("peso"). value;
+    let imc = peso / altura **2;
+
+    resultado.innerHTML=imc;
+    console.log(imc);
+    
+
+  
+    if (imc <= 18.5) {
+        lectura.innerHTML= "Usted posee Bajo peso";   
+    }   
+    else if (imc <= 24.9) {
+        lectura.innerHTML= "Su pese es normal o adecuado";
+    } 
+    else if(imc <= 29.9) {
+        lectura.innerHTML= "Usted posee sobrepeso";
+    } 
+    else if (imc <= 34.9) {
+        lectura.innerHTML= "Usted posee obesidad de grado 1";
+    }
+    else if (imc <= 39.9) {
+        lectura.innerHTML= "Usted posee obesidad de grado 2";
+    }
+    else if (imc >= 40.0) {
+        lectura.innerHTML= "Usted posee obesidad grado 3 o morbida";
+    } 
+    
+    
+    
+}
+
+
+let boton = document.getElementById("calcular");
+boton.addEventListener("click", calculador);
