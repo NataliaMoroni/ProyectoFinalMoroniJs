@@ -10,36 +10,82 @@ function calculador(){
     
     let imc = peso / altura **2;
 
-   
     resultado.innerHTML=imc;
     localStorage.imc = imc;
     //console.log(imc);
-    
 
   
     if (imc <= 18.5) {
         lectura.innerHTML= "Usted posee Bajo peso";   
         localStorage.imc = lectura.innerHTML;
+        Swal.fire({
+            
+            text: 'Usted posee Bajo peso',
+            imageUrl: 'https://dieteticaynutricionweb.files.wordpress.com/2017/01/cropped-promocion-11.png',
+            imageWidth: 400,
+            imageHeight: 100,
+            imageAlt: 'Nutricion y Salud',
+          })
     }   
     else if (imc <= 24.9) {
         lectura.innerHTML= "Su peso es normal o adecuado";
         localStorage.lectura = lectura.innerHTML;
+        Swal.fire({
+            
+            text: 'Su peso es normal o adecuado',
+            imageUrl: 'https://dieteticaynutricionweb.files.wordpress.com/2017/01/cropped-promocion-11.png',
+            imageWidth: 400,
+            imageHeight: 100,
+            imageAlt: 'Nutricion y Salud',
+          })
     } 
     else if(imc <= 29.9) {
         lectura.innerHTML= "Usted posee sobrepeso";
         localStorage.lectura = lectura.innerHTML;
+        Swal.fire({
+            
+            text: 'Usted posee sobrepeso',
+            imageUrl: 'https://dieteticaynutricionweb.files.wordpress.com/2017/01/cropped-promocion-11.png',
+            imageWidth: 400,
+            imageHeight: 100,
+            imageAlt: 'Nutricion y Salud',
+          })
     } 
     else if (imc <= 34.9) {
         lectura.innerHTML= "Usted posee obesidad de grado 1";
         localStorage.lectura = lectura.innerHTML;
+        Swal.fire({
+            
+            text: 'Usted posee obesidad de grado 1',
+            imageUrl: 'https://dieteticaynutricionweb.files.wordpress.com/2017/01/cropped-promocion-11.png',
+            imageWidth: 400,
+            imageHeight: 100,
+            imageAlt: 'Nutricion y Salud',
+          })
     }
     else if (imc <= 39.9) {
         lectura.innerHTML= "Usted posee obesidad de grado 2";
         localStorage.lectura = lectura.innerHTML;
+        Swal.fire({
+            
+            text: 'Usted posee obesidad de grado 2',
+            imageUrl: 'https://dieteticaynutricionweb.files.wordpress.com/2017/01/cropped-promocion-11.png',
+            imageWidth: 400,
+            imageHeight: 100,
+            imageAlt: 'Nutricion y Salud',
+          })
     }
     else if (imc >= 40.0) {
         lectura.innerHTML= "Usted posee obesidad grado 3 o morbida";
         localStorage.lectura = lectura.innerHTML;
+        Swal.fire({
+            
+            text: 'Usted posee obesidad grado 3 o morbida',
+            imageUrl: 'https://dieteticaynutricionweb.files.wordpress.com/2017/01/cropped-promocion-11.png',
+            imageWidth: 400,
+            imageHeight: 100,
+            imageAlt: 'Nutricion y Salud',
+          })
     } 
      
     
@@ -50,4 +96,12 @@ let boton = document.getElementById("calcular");
 boton.addEventListener("click", calculador);
 
 
-
+Swal.fire({
+    title: 'Bienvenida/o!! A continuación podrá calcular su Indice de Masa Corporal en pocos pasos',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
