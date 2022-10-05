@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!--Animacion-->
     <link
     rel="stylesheet"
@@ -43,12 +44,23 @@
     <br>
     <br>
     <br>
+  
+    
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 d-md-block">
+          <div class="contenedor__home">
+            <img src="./multimedia/habitosSanos3.webp" alt="agua" class="agua">
+          
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--Home--> 
-    <!--
+    <!--Home
      <section class="container-fluid">
         <div class="row">
-          <div class="col-lg-9 col-md-7 col-sm-12 d-md-block">
+          <div class="col-lg-12 col-md-12 col-sm-12 d-md-block">
             <div id="carouselExampleFade" class="carousel slide carousel-fade contenedor" data-bs-ride="carousel">
               <div class="carousel-inner contenedor__home ">
                 <div class="carousel-item active">
@@ -81,10 +93,10 @@
           </div>
 
         </div>
-      </section>
+      </section>-->
    
 <br>
-<br>-->
+<br>
 
     <!--Imc
     <div class="col-lg-12 col-md-12 col-sm-12 contenedor__contacto"> 
@@ -136,6 +148,48 @@
                 <p><span id="lectura"></span></p>
                   
             </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="container">
+              <div class="row">
+              <form id="form">
+                <div class="mb-3">
+                  <h2>Dejanos tu consulta</h2>
+                  <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                  <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Nombre" name="nombre"> 
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+                  <input type="number" class="form-control" placeholder="Teléfono" name="telefono">
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" placeholder="email" name="mail">
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Mensaje</label>
+                  <textarea type="text" class="form-control" placeholder="Mensaje" name="mensaje"></textarea>
+                </div>
+
+                
+                <input type="submit" class="btn btn-success" id="button" value="Enviar Mensaje" >
+                <br>
+                <br>
+              </form>
+              <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+              <script type="text/javascript">emailjs.init('FI3_ABi5PZV345jTK')</script>
+              </div>
+            </div>
       <!--Footer-->
      <section class="container-fluid">
       <div class="row">
@@ -161,6 +215,7 @@
   
  
     <!--js-->    
+    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
     <script src="./script.js"></script>
     

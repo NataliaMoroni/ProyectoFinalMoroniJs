@@ -105,3 +105,29 @@ Swal.fire({
       popup: 'animate__animated animate__fadeOutUp'
     }
   })
+
+
+  //formulario
+  const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_x9uvlmy';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar Mensaje';
+      //alert('Mensaje enviado correctamente');
+      Swal.fire('Mensaje enviado correctamente');
+    }, (err) => {
+      btn.value = 'Enviar Mensaje ';
+      alert(JSON.stringify(err));
+    });
+});
+
+  

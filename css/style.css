@@ -112,8 +112,22 @@ h1 {
     width: 30px;
  }
  */
+ .contenedor__home {
+   width: 98%;
+   max-width: 1440px;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+ }
   
-footer
+
+/*footer*/
+
 .contenedor__piedepagina{
    background-color: white;
 }
