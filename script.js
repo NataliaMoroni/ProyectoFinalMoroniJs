@@ -131,6 +131,7 @@ document.getElementById('form')
 });
 
 
+//comentarios
 fetch("./data.json")
 .then(response => response.json())
 .then(data => {
@@ -147,7 +148,7 @@ fetch("./data.json")
   });
 })
 
-  
+//peticion a jsonplaceholder
 fetch('https://jsonplaceholder.typicode.com/posts')
 .then(response => response.json())
 .then(data => {
@@ -168,19 +169,4 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 })
 
 
-//usando post
-
-fetch("https://jsonplaceholder.typicode.com/posts", {
-  method: 'POST',
-  body: JSON.stringify({
-    title: "Prueba",
-    body: "probando la peticion",
-    userId: 1
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-.then(response => response.json())
-.then(data => console.log(data))
 
