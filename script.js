@@ -130,4 +130,57 @@ document.getElementById('form')
     });
 });
 
+
+fetch("./data.json")
+.then(response => response.json())
+.then(data => {
+  data.forEach(item => {
+    let li = document.createElement("li");
+    li.innerHTML = `
+      <h1>${item.nombre}</h1>
+      
+      <p>$${item.comentario}</p>
+      <br>
+      <br>
+    `;
+    listado.append(li);
+  });
+})
+
   
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(response => response.json())
+.then(data => {
+
+  let listado = document.getElementById("listado");
+  data.forEach(item => {
+    
+    let li = document.createElement("li");
+    li.innerHTML = `
+      <h1>Nombre: ${item.name}</h1>
+    
+      <p>${item.body}</p>
+      <br>
+      <br>
+    `;
+    listado.append(li);
+  });
+})
+
+
+//usando post
+
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: 'POST',
+  body: JSON.stringify({
+    title: "Prueba",
+    body: "probando la peticion",
+    userId: 1
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+.then(response => response.json())
+.then(data => console.log(data))
+
