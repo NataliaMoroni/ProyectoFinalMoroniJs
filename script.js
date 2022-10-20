@@ -12,7 +12,7 @@ function calculador(){
 
     resultado.innerHTML=imc;
     localStorage.imc = imc;
-    //console.log(imc);
+    
 
   
     if (imc <= 18.5) {
@@ -122,7 +122,6 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Enviar Mensaje';
-      //alert('Mensaje enviado correctamente');
       Swal.fire('Mensaje enviado correctamente');
     }, (err) => {
       btn.value = 'Enviar Mensaje ';
